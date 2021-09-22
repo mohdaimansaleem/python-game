@@ -14,7 +14,8 @@ winner=open("winner_name.txt","r")
 w_name=winner.read()
 winner.close()
 
-print(f"HIGH SCORE BY {w_name} : {sol} ")
+print(f"HIGH SCORE BY {w_name}  ")
+print(f"HIGH SCORE : {sol}  ")
 
 
 while (guess!=Random_number):
@@ -36,6 +37,8 @@ while (guess!=Random_number):
 if(sol>=count):
    print("NEW RECORD!!")
    name=input("ENTER NAME :")
+
+   name=name.upper()
    high_score=open("high_score.txt","w")
    count=str(count)
    high_score.write(count)
